@@ -1,0 +1,36 @@
+/* ------------------------Чим ми займаємося------------------------- */
+.section.about {
+    padding-top: 0;
+}
+
+.work-list {
+    display: flex;
+}
+
+.work-list__item {
+    flex-basis: calc((100% - 60px) / 3);
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.work-list__work {
+    position: relative;
+}
+
+.work-list__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--hero-text);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}

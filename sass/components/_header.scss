@@ -1,0 +1,109 @@
+/* ----------------------Стилі для header--------------------------- */
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+/* ----------------------------Лого--------------------------------- */
+.site-logo {
+    margin-right: 93px;
+
+    font-family: $fontLogo;
+    color: #000000;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+}
+
+.logo {
+    color: var(--accent-color);
+    font-family: $fontLogo;
+}
+
+/* -----------------------Навігація по сайту------------------------ */
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+    display: flex;
+}
+
+.site-nav__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav__link {
+    transition: color var(--transition);
+
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &.current {
+        color: var(--accent-color);
+    }    
+}
+
+.site-nav__current-link {
+    position: relative;
+}
+
+.site-nav__link--current::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    bottom: -1px;
+
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* --------------------------Контакти------------------------------- */
+.contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts__item+.contacts__item {
+    margin-left: 50px;
+}
+
+.contacts__link {
+    transition: color var(--transition);
+
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--prymary-text-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.contacts__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+

@@ -1,0 +1,37 @@
+/* --------------------------Переваги------------------------------- */
+
+.features {
+    display: flex;
+}
+
+.features__item {
+    flex-basis: calc((100% - 90px) / 4);
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.features__icon {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #F5F4FA;
+}
+
+.features__title {
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+}
+
+.features__text {
+    width: 270px;
+    font-size: 14px;
+    line-height: 1.71;
+}

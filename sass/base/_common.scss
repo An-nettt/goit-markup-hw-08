@@ -1,0 +1,15 @@
+body {
+    color: var(--prymary-text-color);
+    background-color: var(--prymary-bgc);
+    font-family: $fontPrimary;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

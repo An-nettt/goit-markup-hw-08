@@ -1,0 +1,77 @@
+/* ---------------------------Команда-------------------------------- */
+.team {
+    background-color: var(--secondary-bgc);
+}
+
+.teams {
+    display: flex;
+}
+
+.teams__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    flex-basis: calc((100% - 90px) / 4);
+    background-color: var(--prymary-bgc);
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.teams__members {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.teams__title {
+    padding-bottom: 10px;
+
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+.teams__text {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.team-link {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.team-link__item {
+    width: 44px;
+    height: 44px;
+}
+
+.team-link__soc-link {
+    transition: background-color var(--transition);
+
+    @extend %soc-link;    
+
+    background-color: var(--prymary-bgc);
+    color: #AFB1B8;    
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+.team-link__soc-icon {
+    transition: fill var(--transition);
+
+    fill: currentColor;
+    .team-link__soc-link:hover &,
+    .team-link__soc-link:focus & {
+        fill: var(--hero-text);
+    }
+}
+
+

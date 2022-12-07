@@ -1,0 +1,40 @@
+/* ------------------------Постійні клієнти----------------------------- */
+.clients-list {
+    display: flex;
+    justify-content: center;
+}
+
+.clients-list__item {
+    flex-basis: calc((100% - 150px) / 6);
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.clients-list__link {
+    transition: border var(--transition);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #AFB1B8;
+    @include border($color: #AFB1B8);
+    border-radius: 4px;
+    padding: 15px 31px;
+    &:hover,
+    &:focus {
+        @include border($color: var(--accent-color));
+    }
+}
+
+.clients-list__logo {
+    transition: fill var(--transition);
+
+    fill: currentColor;
+    .clients-list__link:hover &,
+    .clients-list__:focus & {
+        fill: var(--accent-color);
+    }
+}
+

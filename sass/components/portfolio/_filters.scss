@@ -1,0 +1,16 @@
+/* ----------------------------Фільтри-------------------------------- */
+.filters {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.filters .item {
+    margin-right: 8px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
