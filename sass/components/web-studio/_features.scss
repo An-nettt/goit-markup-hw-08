@@ -1,7 +1,11 @@
 /* --------------------------Переваги------------------------------- */
 
 .features {
-    display: flex;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
+    
 }
 
 .features__item {

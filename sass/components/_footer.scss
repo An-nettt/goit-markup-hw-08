@@ -7,9 +7,12 @@
 }
 
 .footer-list {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    @media screen and (min-width:768px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    
 }
 
 .footer-list__contacts {

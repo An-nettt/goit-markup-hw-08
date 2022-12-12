@@ -22,8 +22,11 @@
 
 /* -----------------------Навігація по сайту------------------------ */
 .main-nav {
-    display: flex;
-    align-items: center;
+    @media screen and (min-width:768px) {
+        display: flex;
+        align-items: center;
+    }
+    
 }
 
 .site-nav {

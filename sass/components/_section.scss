@@ -1,16 +1,30 @@
 /* --------------------------Секція------------------------------- */
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width:768) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }    
 }
 
 .section-title {
-    margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     color: var(--title-text-color);
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
+
+    @media screen and (min-width:768) {
+        margin-top: 0;
+        margin-bottom: 50px;
+
+        font-size: 36px;
+    }
+    
+
+
 }
