@@ -7,6 +7,7 @@
 }
 
 .footer-list {
+    
     @media screen and (min-width:768px) {
         display: flex;
         align-items: baseline;
@@ -16,11 +17,21 @@
 }
 
 .footer-list__contacts {
-    margin-right: 70px;
+    margin-bottom: 60px;
+    width: 100%;
+    text-align: center;
+
+    @media screen and (min-width:768px) {}
+        margin-right: 165px;
+    @media screen and (min-width:1200px) {
+        margin-right: 70px;
+    }
 }
 
 .footer-list__logo {
     display: inline-block;
+    
+    text-align: center;
     margin-bottom: 20px;
 
     color: #FFFFFF;
@@ -29,6 +40,14 @@
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
+
+    @media screen and (min-width:768px) {
+        
+    }
+
+    @media screen and (min-width:1200px) {
+
+    }
 }
 
 .footer .item+.item {
@@ -52,6 +71,7 @@
 .contacts-footer {
     transition: color var(--transition);
 
+
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
     font-size: 14px;
@@ -64,12 +84,17 @@
 }
 
 .footer-list__join {
-    margin-right: auto;
+    margin-bottom: 60px;
+
+    @media screen and (min-width:1200px) {
+        margin-right: auto;
+    }    
 }
 
 .join__title,
 .subscribe__title {
     margin-bottom: 20px;
+    text-align: center;
 
     font-weight: 700;
     font-size: 14px;
@@ -116,14 +141,28 @@
 
 .subscribe__form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+    }
+    
 }
 
 .subscribe__label {
-    margin-right: 12px;
-    width: 358px;
+    width: 100%;
+    @media screen and (min-width:1200px) {
+        margin-right: 12px;
+        width: 358px;
+    }
+    
 }
 
 .subscribe__input {
+    margin-bottom: 20px;     
+
     transition: border-color var(--transition);
     box-sizing: border-box;
 
@@ -150,7 +189,7 @@
 }
 
 .subscribe__button {
-    transition: background-color var(--transition);
+    transition: background-color var(--transition);    
 
     display: flex;
     width: 200px;
@@ -162,7 +201,7 @@
     &:hover,
     &:focus {
         background-color: #188CE8;
-    }
+    }    
 }
 
 .subscribe__text {
