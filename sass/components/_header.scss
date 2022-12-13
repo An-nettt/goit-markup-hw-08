@@ -5,14 +5,16 @@
 
 /* ----------------------------Лого--------------------------------- */
 .site-logo {
-    margin-right: 93px;
-
     font-family: $fontLogo;
     color: #000000;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
+
+    @include desktop {
+        margin-right: 93px;
+    }
 }
 
 .logo {
@@ -22,7 +24,11 @@
 
 /* -----------------------Навігація по сайту------------------------ */
 .main-nav {
-    @media screen and (min-width:768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
         display: flex;
         align-items: center;
     }
@@ -31,6 +37,7 @@
 
 .site-nav {
     display: flex;
+    display: none;
 }
 
 .site-nav__item:not(:last-child) {
@@ -78,6 +85,7 @@
 .contacts {
     display: flex;
     margin-left: auto;
+    display: none;
 }
 
 .contacts__item+.contacts__item {
@@ -110,3 +118,128 @@
     fill: currentColor;
 }
 
+.mobile-menu {
+    position: fixed;   
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--prymary-bgc);
+    padding-top: 48px;
+    padding-bottom: 48px; 
+    > .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: auto;
+    }  
+    
+    @include tablet {
+        display: none;
+    }    
+}
+
+.button-menu {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    justify-content: right;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.button-menu_close {
+    display: block;
+    margin-left: auto;
+}
+
+.site-menu__item {
+    margin-left: 25px;
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.site-menu___link {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &.current {
+        color: var(--accent-color);
+    }
+}
+
+.contacts-menu {
+    margin-left: 25px;
+}
+
+.contacts-tel {
+    margin-bottom: 32px;
+}
+
+.contacts-tel__link {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.contacts-mail {
+    margin-bottom: 54px;
+}
+
+.contacts-mail__link {
+    color: var(--prymary-text-color);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-decoration: none;    
+}
+
+.soc-menu {
+    display: flex;
+    margin-left: 25px;
+}
+
+.soc-menu_item {
+    
+    justify-content: start;
+
+    &:not(:last-child){
+        &::after {
+            content: '';
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            margin: 0 10px;
+        }
+    }
+
+}
+.soc-menu_link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--accent-color);
+
+}
