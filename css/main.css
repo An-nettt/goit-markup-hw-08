@@ -84,11 +84,14 @@ img {
   height: auto;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 1px solid teal;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -431,6 +434,7 @@ img {
 
 /* ----------------------Стилі для header--------------------------- */
 .header {
+  position: relative;
   border-bottom: 1px solid #ECECEC;
 }
 
@@ -454,8 +458,7 @@ img {
   font-family: Raleway, sans-serif;
 }
 
-/* -----------------------Навігація по сайту------------------------ */
-.main-nav {
+.mobile-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,23 +468,36 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 15px 16px;
 }
-@media screen and (min-width: 768px) {
+
+/* -----------------------Навігація по сайту------------------------ */
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
   .main-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: none;
   }
 }
 
 .site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .site-nav__item:not(:last-child) {
@@ -523,11 +539,15 @@ img {
 
 /* --------------------------Контакти------------------------------- */
 .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .contacts__item + .contacts__item {
@@ -562,51 +582,47 @@ img {
   fill: currentColor;
 }
 
-.mobile-menu {
+/* ------------------------Мобільне меню---------------------------- */
+.menu-container {
   position: fixed;
   top: 0;
-  z-index: 1;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: var(--prymary-bgc);
-  padding-top: 48px;
-  padding-bottom: 48px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform var(--transition);
+  transition: -webkit-transform var(--transition);
+  transition: transform var(--transition);
+  transition: transform var(--transition), -webkit-transform var(--transition);
 }
-.mobile-menu > .container {
+.menu-container .mob-container {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  overflow: auto;
+  outline: 5px solid teal;
+}
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 @media screen and (min-width: 768px) {
-  .mobile-menu {
+  .menu-container {
     display: none;
   }
 }
 
 .button-menu {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
   padding: 0;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.button-menu:hover, .button-menu:focus {
-  color: var(--accent-color);
+.button-menu:focus {
+  fill: var(--accent-color);
 }
 @media screen and (min-width: 768px) {
   .button-menu {
@@ -614,9 +630,11 @@ img {
   }
 }
 
-.button-menu_close {
+.button-menu.close {
   display: block;
   margin-left: auto;
+  margin-right: 15px;
+  margin-top: 10px;
 }
 
 .site-menu__item {
@@ -638,8 +656,9 @@ img {
   color: var(--accent-color);
 }
 
-.contacts-menu {
+.contacts-list {
   margin-left: 25px;
+  outline: 5px solid tea;
 }
 
 .contacts-tel {
