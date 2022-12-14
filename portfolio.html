@@ -18,16 +18,16 @@
 
   <body>
     <header class="header">
-      <div class="container main-nav">
+      <div class="container">
         <nav class="main-nav">
           <a class="site-logo link" href="./index.html"> <span class="logo">Web</span>Studio</a>
           <ul class="site-nav list">
-            <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студія</a></li>
+            <li class="site-nav__item">
+              <a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a>
+            </li>
             <li class="site-nav__item">
               <div class="site-nav__current-link">
-                <a href="./portfolio.html" class="site-nav__link site-nav__link--current"
-                  >Портфоліо</a
-                >
+                <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
               </div>
             </li>
             <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li>
@@ -55,6 +55,84 @@
             </a>
           </li>
         </ul>
+        <div class="mobile-menu">
+          <a class="site-logo link" href="./index.html"> <span class="logo">Web</span>Studio</a>
+          <button
+            type="button"
+            class="button-menu js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Відкрити меню">
+              <use class="icon-open" href="./images/icons.svg#icon-menu-open"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="menu-container js-menu-container id=mobile-menu">
+          <div class="mob-container">
+            <div class="navigation">
+              <button type="button" class="button-menu close js-close-menu">
+                <svg width="40" height="40" aria-label="”Закрити меню">
+                  <use class="icon-close" href="./images/icons.svg#icon-menu-close"></use>
+                </svg>
+              </button>
+              <ul class="site-menu list">
+                <li class="site-menu__item">
+                  <a href="./index.html" class="site-menu___link site-menu___link--current"
+                    >Студія</a
+                  >
+                </li>
+                <li class="site-menu__item">
+                  <div class="site-menu__current-link">
+                    <a href="./portfolio.html" class="site-menu___link">Портфоліо</a>
+                  </div>
+                </li>
+                <li class="site-menu__item"><a href="" class="site-menu___link">Контакти</a></li>
+              </ul>
+            </div>
+            <div class="contacts-menu">
+              <ul class="contacts-list list">
+                <li class="contacts-tel">
+                  <a href="tel:+380961111111" class="contacts-tel__link" aria-label="Телефон">
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="contacts-mail">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="contacts-mail__link"
+                    aria-label="Електронна пошта"
+                  >
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="soc-menu list">
+                <li class="soc-menu_item">
+                  <a href="" target="_blank" rel="noopener noreferrer" class="soc-menu_link"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="soc-menu_item">
+                  <a href="" target="_blank" rel="noopener noreferrer" class="soc-menu_link"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="soc-menu_item">
+                  <a href="" target="_blank" rel="noopener noreferrer" class="soc-menu_link"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="soc-menu_item">
+                  <a href="" target="_blank" rel="noopener noreferrer" class="soc-menu_link"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -346,5 +424,6 @@
         </ul>
       </div>
     </footer>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

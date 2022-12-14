@@ -136,7 +136,11 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;       
+    height: 100dvh;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    
+    z-index: 999;      
 
     background-color: var(--prymary-bgc);
     
@@ -144,13 +148,11 @@
     transition: transform var(--transition); 
 
     & .mob-container {
-        height: 100%;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
-        // overflow: auto;
-    
-        outline: 5px solid teal;
+        height: calc(100% - 40px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
     }
         
     &.is-open {
@@ -183,8 +185,7 @@
 .button-menu.close {
     display: block;
     margin-left: auto;
-    margin-right: 15px;
-    margin-top: 10px;
+    margin-right: 15px;    
 }
 
 .site-menu__item {    
@@ -243,7 +244,8 @@
 
 .soc-menu {
     display: flex;
-    margin-left: 25px;    
+    margin-left: 25px;
+    
 }
 
 .soc-menu_item {    
