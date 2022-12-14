@@ -23,14 +23,18 @@
           <a class="site-logo link" href="./index.html"> <span class="logo">Web</span>Studio</a>
           <ul class="site-nav list">
             <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a>
+              <a href="./index.html" class="site-nav__link">Студія</a>
             </li>
             <li class="site-nav__item">
               <div class="site-nav__current-link">
-                <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
+                <a href="./portfolio.html" class="site-nav__link site-nav__link--current"
+                  >Портфоліо</a
+                >
               </div>
             </li>
-            <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li>
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link">Контакти</a>
+            </li>
           </ul>
         </nav>
         <ul class="contacts list">
@@ -79,14 +83,14 @@
               </button>
               <ul class="site-menu list">
                 <li class="site-menu__item">
-                  <a href="./index.html" class="site-menu___link site-menu___link--current"
-                    >Студія</a
-                  >
+                  <div class="site-menu__current-link">
+                    <a href="./index.html" class="site-menu___link site-menu___link--current"
+                      >Студія</a
+                    >
+                  </div>
                 </li>
                 <li class="site-menu__item">
-                  <div class="site-menu__current-link">
-                    <a href="./portfolio.html" class="site-menu___link">Портфоліо</a>
-                  </div>
+                  <a href="./portfolio.html" class="site-menu___link">Портфоліо</a>
                 </li>
                 <li class="site-menu__item"><a href="" class="site-menu___link">Контакти</a></li>
               </ul>
@@ -319,90 +323,92 @@
     <footer class="footer">
       <div class="container">
         <ul class="footer-list list">
-          <li class="footer-list__contacts">
-            <a class="footer-list__logo link" href="./index.html">
-              <span class="logo">Web</span>Studio</a
-            >
-            <address>
-              <ul class="list">
-                <li class="item">
+          <div class="footer-tablet">
+            <li class="footer-list__contacts">
+              <a class="footer-list__logo link" href="./index.html">
+                <span class="logo">Web</span>Studio</a
+              >
+              <address>
+                <ul class="list">
+                  <li class="item">
+                    <a
+                      class="address link"
+                      href="https://goo.gl/maps/Ljtp2W8DD5nZZjgz7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >м. Київ, пр-т Лесі Українки, 26</a
+                    >
+                  </li>
+                  <li class="item">
+                    <a class="contacts-footer link" href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li class="item">
+                    <a class="contacts-footer link" href="tel:+380961111111">+38 096 111 11 11</a>
+                  </li>
+                </ul>
+              </address>
+            </li>
+            <li class="footer-list__join join">
+              <h3 class="join__title">приєднуйтесь</h3>
+              <ul class="join__link list">
+                <li class="join__item">
                   <a
-                    class="address link"
-                    href="https://goo.gl/maps/Ljtp2W8DD5nZZjgz7"
+                    href=""
+                    class="join__soc-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >м. Київ, пр-т Лесі Українки, 26</a
+                    aria-label="Інстаграм"
                   >
+                    <svg class="join__soc-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="item">
-                  <a class="contacts-footer link" href="mailto:info@devstudio.com"
-                    >info@devstudio.com</a
+                <li class="join__item">
+                  <a
+                    href=""
+                    class="join__soc-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Твітер"
                   >
+                    <svg class="join__soc-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="item">
-                  <a class="contacts-footer link" href="tel:+380961111111">+38 096 111 11 11</a>
+                <li class="join__item">
+                  <a
+                    href=""
+                    class="join__soc-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Фейсбук"
+                  >
+                    <svg class="join__soc-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="join__item">
+                  <a
+                    href=""
+                    class="join__soc-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Лінкедін"
+                  >
+                    <svg class="join__soc-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
-            </address>
-          </li>
-          <li class="footer-list__join join">
-            <h3 class="join__title">приєднуйтесь</h3>
-            <ul class="join__link list">
-              <li class="join__item">
-                <a
-                  href=""
-                  class="join__soc-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Інстаграм"
-                >
-                  <svg class="join__soc-icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="join__item">
-                <a
-                  href=""
-                  class="join__soc-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Твітер"
-                >
-                  <svg class="join__soc-icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="join__item">
-                <a
-                  href=""
-                  class="join__soc-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Фейсбук"
-                >
-                  <svg class="join__soc-icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="join__item">
-                <a
-                  href=""
-                  class="join__soc-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Лінкедін"
-                >
-                  <svg class="join__soc-icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="footer-list__subscribe">
+            </li>
+          </div>
+          <li class="footer-list__subscribe subscribe">
             <h3 class="subscribe__title">Підпишіться на розсилку</h3>
             <form class="subscribe__form">
               <label class="subscribe__label">
@@ -424,6 +430,7 @@
         </ul>
       </div>
     </footer>
+
     <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

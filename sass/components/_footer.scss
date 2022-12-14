@@ -6,9 +6,8 @@
     background-color: var(--bgc-hero-footer);
 }
 
-.footer-list {
-    
-    @media screen and (min-width:768px) {
+.footer-list {    
+    @include desktop {
         display: flex;
         align-items: baseline;
         justify-content: space-between;
@@ -16,13 +15,22 @@
     
 }
 
+.footer-tablet {
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        display: flex;
+        align-items: baseline;        
+    }
+}
+
 .footer-list__contacts {
     margin-bottom: 60px;
     width: 100%;
     text-align: center;
 
-    @media screen and (min-width:768px) {}
+    @include tablet {
         margin-right: 165px;
+    }
+        
     @media screen and (min-width:1200px) {
         margin-right: 70px;
     }
@@ -68,9 +76,9 @@
     }
 }
 
+
 .contacts-footer {
     transition: color var(--transition);
-
 
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
@@ -86,7 +94,11 @@
 .footer-list__join {
     margin-bottom: 60px;
 
-    @media screen and (min-width:1200px) {
+    @include tablet {
+        margin-right: 89px;
+    }
+
+    @include desktop {
         margin-right: auto;
     }    
 }
@@ -153,7 +165,11 @@
 
 .subscribe__label {
     width: 100%;
-    @media screen and (min-width:1200px) {
+
+    @include tablet {
+        width: 450px;
+    }
+    @include desktop {
         margin-right: 12px;
         width: 358px;
     }

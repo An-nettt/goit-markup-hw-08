@@ -5,6 +5,14 @@
     border-bottom: 1px solid #ECECEC;    
 }
 
+.header .container {
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+    }  
+}
+
 /* ----------------------------Лого--------------------------------- */
 .site-logo {
     font-family: $fontLogo;
@@ -13,6 +21,10 @@
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
+
+    @include tablet {
+        margin-right: 88px;
+    }
 
     @include desktop {
         margin-right: 93px;
@@ -31,21 +43,29 @@
     padding: 15px 16px;
 }
 
+.mobile-menu {
+    @include tablet {
+        display: none;
+    }
+}
+
+
 /* -----------------------Навігація по сайту------------------------ */
 .main-nav {    
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center;    
 
     @media screen and (max-width:767px) {
         display: none;
-    }   
+    }
 }
 
 .site-nav {    
     display: none;
+    
     @include tablet {
         display: flex;
+        // margin-right: 96px;
     }
 }
 
@@ -63,7 +83,7 @@
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
     &:hover,
@@ -93,40 +113,57 @@
 /* --------------------------Контакти------------------------------- */
 .contacts {
     display: none;
+
     @include tablet {
+        display: block;
+        margin-left: auto;        
+    }
+
+    @include desktop {
         display: flex;
-        margin-left: auto;
+        
     }    
 }
 
 .contacts__item+.contacts__item {
-    margin-left: 50px;
+    @include desktop {
+        margin-left: 50px;
+    }    
 }
 
 .contacts__link {
-    transition: color var(--transition);
-
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    transition: color var(--transition);    
 
     color: var(--prymary-text-color);
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     text-decoration: none;
     &:hover,
     &:focus {
         color: var(--accent-color);
     }
+
+    @include desktop {        
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        font-size: 14px;
+        line-height: 1.14;
+    }
 }
 
 .contacts__icon {
-    margin-right: 10px;
+    margin-right: 8px;
     fill: currentColor;
+
+    @include desktop {
+        margin-right: 10px;
+    }
 }
 
 /* ------------------------Мобільне меню---------------------------- */
