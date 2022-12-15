@@ -97,13 +97,17 @@
 .join__title,
 .subscribe__title {
     margin-bottom: 20px;
-    text-align: center;
+    
 
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--hero-text);
+
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
 }
 
 .join__link {
