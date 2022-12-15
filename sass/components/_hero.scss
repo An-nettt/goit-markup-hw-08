@@ -11,11 +11,11 @@
     padding-bottom: 118px;
 
     @media screen and (min-width:577px) {
-        background-image: var(--gradient), url(../../images/hero-bg-tablet-1x.jpg);
+        background-image: var(--gradient), url(../images/hero-bg-tablet-1x.jpg);
     } 
 
     @media screen and (min-width:769px) {
-        background-image: var(--gradient), url(../../images/hero-bg-desktop-1x.jpg);
+        background-image: var(--gradient), url(../images/hero-bg-desktop-1x.jpg);
     }
 
     @include desktop {
