@@ -48,14 +48,6 @@
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
-
-    @media screen and (min-width:768px) {
-        
-    }
-
-    @media screen and (min-width:1200px) {
-
-    }
 }
 
 .footer .item+.item {
@@ -75,7 +67,6 @@
         color: var(--accent-color);
     }
 }
-
 
 .contacts-footer {
     transition: color var(--transition);
@@ -152,15 +143,13 @@
 }
 
 .subscribe__form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex;    
     width: 100%;
 
-    @media screen and (min-width:1200px) {
-        display: flex;
-    }
-    
+    @media screen and (min-width:480px) and (max-width:1199px) {
+        flex-direction: column;
+        align-items: center;
+    }    
 }
 
 .subscribe__label {
