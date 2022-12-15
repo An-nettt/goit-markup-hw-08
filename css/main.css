@@ -15,6 +15,7 @@
   --secondary-bgc: #F5F4FA;
   --bgc-hero-footer: #2F303A;
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 .visually-hidden {
@@ -64,12 +65,6 @@ ul {
   margin-bottom: 0;
 }
 
-img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
 body {
   color: var(--prymary-text-color);
   background-color: var(--prymary-bgc);
@@ -78,14 +73,15 @@ body {
   letter-spacing: 0.03em;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 .no-scroll {
   overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -794,22 +790,37 @@ img {
 
 /* --------------------------Герой------------------------------- */
 .hero {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-image: var(--gradient), url(../../images/hero-bg-mobile-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1600px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+@media screen and (min-width: 577px) {
+  .hero {
+    background-image: var(--gradient), url(../../images/hero-bg-tablet-1x.jpg);
+  }
+}
+@media screen and (min-width: 769px) {
+  .hero {
+    background-image: var(--gradient), url(../../images/hero-bg-desktop-1x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
-  max-width: 696px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   -webkit-box-align: center;
@@ -818,7 +829,7 @@ img {
   color: var(--hero-text);
   font-weight: 900;
   font-size: 26px;
-  line-height: 1.62;
+  line-height: 1.6153846154;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -826,7 +837,8 @@ img {
 @media screen and (min-width: 1200px) {
   .hero-title {
     font-size: 44px;
-    line-height: 1.36;
+    line-height: 1.3636363636;
+    max-width: 696px;
   }
 }
 
