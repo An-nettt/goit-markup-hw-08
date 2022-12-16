@@ -1267,7 +1267,12 @@ img {
 
 .teams__members {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .teams__members {
+    padding-bottom: 30px;
+  }
 }
 
 .teams__title {
