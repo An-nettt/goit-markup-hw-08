@@ -57,6 +57,10 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+
+    @include tablet {
+        text-align: left;
+    }
 }
 
 .features__text {

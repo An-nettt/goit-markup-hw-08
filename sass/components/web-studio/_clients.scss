@@ -41,7 +41,8 @@
     }
 
     @include desktop {
-        flex-basis: calc((100% - 150px) / 6);        
+        flex-basis: calc((100% - 150px) / 6); 
+        margin-bottom: 0;       
         &:not(:last-child) {
             margin-right: 30px;
         }    
