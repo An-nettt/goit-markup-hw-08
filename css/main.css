@@ -426,10 +426,14 @@ img {
   width: 16px;
   height: 15px;
   margin-right: 7px;
-  margin-left: 12px;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
   fill: transparent;
+}
+@media screen and (min-width: 1200px) {
+  .policy-label .policy-check {
+    margin-left: 12px;
+  }
 }
 .policy-check:checked + .policy-label .policy-check {
   background-color: var(--accent-color);

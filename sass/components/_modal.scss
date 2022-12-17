@@ -198,7 +198,10 @@
     width: 16px;
     height: 15px;
     margin-right: 7px;
-    margin-left: 12px;
+    
+    @include desktop {
+        margin-left: 12px;
+    }
 
     @include border($size:2px, $color:var(--title-text-color));
     border-radius: 2px;
