@@ -18,11 +18,16 @@
     line-height: 1.17;
     text-align: center;
 
-    @media screen and (min-width:768) {
+    @include tablet {
         margin-top: 0;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
 
+        font-size: 28px;
+    }
+
+    @include desktop {
         font-size: 36px;
+        margin-bottom: 50px;
     }
     
 
